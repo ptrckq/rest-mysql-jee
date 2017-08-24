@@ -32,7 +32,7 @@ This maven project has a REST API to persist and retrieve data from MySQL databa
  
  If the message is 'Forbidden', probably everything is ok.
  
- ...
+ ---
  
  Now try adding some data
  
