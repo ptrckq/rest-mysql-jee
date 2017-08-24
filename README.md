@@ -28,7 +28,6 @@ This maven project has a REST API to persist and retrieve data from MySQL databa
  ### How to use
  If you are using default JBoss EAP settings you can access the application through http://localhost:8080/restapp/ 
  
- 
  (or else you may need to change port)
  
  If the message is 'Forbidden', probably everything is ok.
