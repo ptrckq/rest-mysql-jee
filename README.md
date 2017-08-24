@@ -26,10 +26,12 @@ This maven project has a REST API to persist and retrieve data from MySQL databa
  Import this project and deploy it on your application server.
  
  ### How to use
- If you are using default JBoss EAP setting you can access the application through
- http://localhost:8080/restapp/
+ If you are using default JBoss EAP settings you can access the application through
+ http://localhost:8080/restapp/ 
+ (or else you may need to change port)
  
  If the message is 'Forbidden', probably everything is ok.
+ 
  Now try adding some data
  
  Example POST Method:
@@ -39,6 +41,7 @@ This maven project has a REST API to persist and retrieve data from MySQL databa
  Example GET-one Method:
  
  > XML  -   http://localhost:8080/restapp/rs/pessoa/dados/192332123/xml
+ 
  >JSON -   http://localhost:8080/restapp/rs/pessoa/dados/192332123/json
  
  Example GET-all Method
