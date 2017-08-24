@@ -32,11 +32,15 @@ This maven project has a REST API to persist and retrieve data from MySQL databa
  
  If the message is 'Forbidden', probably everything is ok.
  
+ ...
+ 
  Now try adding some data
  
  Example POST Method:
  > http://localhost:8080/restapp/rs/pessoa/dados?nome=Joseh&idade=28&rg=192332123
- **WARNING: the RG value must be between 100000000 and 999999999, or else it will reject.** 
+ 
+ **WARNING: the RG value must be between 100000000 and 999999999, or else it will reject.**
+ 
  (Check annotations inside src/java/main/br.com.ptrck.model/Pessoa.class)
  
  Example GET-one Method:
