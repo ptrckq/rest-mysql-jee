@@ -2,12 +2,12 @@
 
 This maven project has a REST API to persist and retrieve data from MySQL database and it also uses JBoss EAP 7 as runtime environment.
 
-# Prerequisites
+### Prerequisites
 - JBoss EAP 7+;
 - MySQL
 - HTTP request sw (Postman, cURL, etc);
 
-# Setup 
+### Setup 
  Create a database called 'restapp' inside your MySQL. (The configurations of persistence.xml will create the tables needed)
  Point your JBoss EAP Datasource that connects to MySQL inside the tag jta-data-source in persistence.xml
   
@@ -25,7 +25,7 @@ This maven project has a REST API to persist and retrieve data from MySQL databa
   
  Import this project and deploy it on your application server.
  
- # How to use
+ ### How to use
  If you are using default JBoss EAP setting you can access the application through
  http://localhost:8080/restapp/
  
@@ -33,16 +33,16 @@ This maven project has a REST API to persist and retrieve data from MySQL databa
  Now try adding some data
  
  Example POST Method:
- http://localhost:8080/restapp/rs/pessoa/dados?nome=Joseh&idade=28&rg=192332123
- WARNING: the RG value must be between 100000000 and 999999999, or else it will reject. (Check annotations inside br.com.ptrck.model/Pessoa.class)
+ > http://localhost:8080/restapp/rs/pessoa/dados?nome=Joseh&idade=28&rg=192332123
+ **WARNING: the RG value must be between 100000000 and 999999999, or else it will reject.** (Check annotations inside br.com.ptrck.model/Pessoa.class)
  
  Example GET-one Method:
  
- XML  -   http://localhost:8080/restapp/rs/pessoa/dados/192332123/xml
- JSON -   http://localhost:8080/restapp/rs/pessoa/dados/192332123/json
+ > XML  -   http://localhost:8080/restapp/rs/pessoa/dados/192332123/xml
+ >JSON -   http://localhost:8080/restapp/rs/pessoa/dados/192332123/json
  
  Example GET-all Method
- http://localhost:8080/restapp/rs/pessoa/dados/todos
+ >http://localhost:8080/restapp/rs/pessoa/dados/todos
  This will retrieve every data from db;
  
  
