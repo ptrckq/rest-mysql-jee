@@ -18,9 +18,10 @@ This maven project has a REST API to persist and retrieve data from MySQL databa
 
 ### Setup 
  Create a database called 'restapp' inside your MySQL. (The configurations of persistence.xml will create the tables needed)
- Point your JBoss EAP Datasource that connects to MySQL inside the tag jta-data-source in persistence.xml
+ Point your JBoss EAP Datasource that connects to this 'restapp' MySQL database inside the tag jta-data-source in persistence.xml
   
-  ```<persistence-unit name="restapp" transaction-type="JTA">
+  ```
+  <persistence-unit name="restapp" transaction-type="JTA">
 		<jta-data-source>java:/MySqlDS</jta-data-source>
 		<class>br.com.ptrck.model.Pessoa</class>
 		<properties>
@@ -28,7 +29,7 @@ This maven project has a REST API to persist and retrieve data from MySQL databa
 			<property name="hibernate.hbm2ddl.auto" value="update"/>
 			<property name="hibernate.transation.jta.platform" value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform"/>
 		</properties>
-	</persistence-unit>
+</persistence-unit>
 ```
   
   
