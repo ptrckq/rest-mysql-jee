@@ -45,22 +45,25 @@ This maven project has a REST API to persist and retrieve data from MySQL databa
  
  Try adding some data
  
- Example POST Method:
+ Example <b>POST</b> Method:
+ > http://localhost:8080/restapp/rs/pessoa/dados?nome={name}&idade={age}&rg={id}
  > http://localhost:8080/restapp/rs/pessoa/dados?nome=Joseh&idade=28&rg=192332123
- 
- **WARNING: the RG value must be between 100000000 and 999999999, or else it will reject.**
+
+ **WARNING: the RG (ID) value must be between 100000000 and 999999999, or else it will reject.**
  
  (Check annotations inside src/java/main/br.com.ptrck.model/Pessoa.class)
  
  ---
  
- Example GET-one Method:
+ Example <b>GET-one</b> Method:
  
+ > XML  -   http://localhost:8080/restapp/rs/pessoa/dados/{id}/xml
  > XML  -   http://localhost:8080/restapp/rs/pessoa/dados/192332123/xml
  
+ >JSON -   http://localhost:8080/restapp/rs/pessoa/dados/{id}/json
  >JSON -   http://localhost:8080/restapp/rs/pessoa/dados/192332123/json
  ---
- Example GET-all Method
+ Example <b>GET-all</b> Method
  >http://localhost:8080/restapp/rs/pessoa/dados/todos
  This will retrieve every data from db;
  
