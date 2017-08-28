@@ -2,6 +2,15 @@
 
 This maven project has a REST API to persist and retrieve data from MySQL database and it also uses JBoss EAP 7 as runtime environment.
 
+### Structure
+
+- src/main/java
+- br.com.ptrck.dao contains only one classe DAO with CRUD methods.
+- br.com.ptrck.model contains class Pessoa with name, age and id and their respectives getters and setters.
+- br.com.ptrck.websvc contains 2 classes for web rest mapping.
+- -d META-INF has persistence.xml configurations.
+
+
 ### Prerequisites
 - JBoss EAP 7+;
 - MySQL
@@ -30,11 +39,11 @@ This maven project has a REST API to persist and retrieve data from MySQL databa
  > http://localhost:8080/restapp/ 
  (or else you may need to change port)
  
- If the message is 'Forbidden', probably everything is ok.
+ If the message is 'Forbidden', your app is running, now you have to test it!
  
  ---
  
- Now try adding some data
+ Try adding some data
  
  Example POST Method:
  > http://localhost:8080/restapp/rs/pessoa/dados?nome=Joseh&idade=28&rg=192332123
@@ -43,12 +52,14 @@ This maven project has a REST API to persist and retrieve data from MySQL databa
  
  (Check annotations inside src/java/main/br.com.ptrck.model/Pessoa.class)
  
+ ---
+ 
  Example GET-one Method:
  
  > XML  -   http://localhost:8080/restapp/rs/pessoa/dados/192332123/xml
  
  >JSON -   http://localhost:8080/restapp/rs/pessoa/dados/192332123/json
- 
+ ---
  Example GET-all Method
  >http://localhost:8080/restapp/rs/pessoa/dados/todos
  This will retrieve every data from db;
